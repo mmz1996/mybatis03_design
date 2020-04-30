@@ -14,11 +14,10 @@ public class DefaultSqlSessionFactory implements SqlSessionFactory {
 
 
     public SqlSession openSession() {
-        return new DefaultSqlSession(configuration,connection);
+        return new DefaultSqlSession(configuration);
     }
 
     private Configuration configuration;
-    private Connection connection;
 
     public DefaultSqlSessionFactory(Configuration configuration){
         this.configuration = configuration;

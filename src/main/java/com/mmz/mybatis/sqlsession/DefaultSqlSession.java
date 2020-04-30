@@ -20,7 +20,7 @@ public class DefaultSqlSession implements  SqlSession {
     private Configuration configuration;
     private Connection connection;
 
-    public DefaultSqlSession(Configuration configuration,Connection connection){
+    public DefaultSqlSession(Configuration configuration){
         this.configuration = configuration;
         this.connection = DataSourceUtil.getConnection(configuration);
     }
