@@ -1,2 +1,8 @@
 自定义mybatis
 
+读取配置文件文件用到io包下面的Resources
+
+得到字节流交给了构建者，构建者使用工具类Configuration，构建了一个工厂对象SqlSessionFactory
+
+工厂对象提供了一个openSession方法，创建一个SqlSession对象
+

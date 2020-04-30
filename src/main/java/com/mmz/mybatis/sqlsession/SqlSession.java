@@ -1,4 +1,4 @@
-package com.mmz.sqlsession;
+package com.mmz.mybatis.sqlsession;
 
 /**
  * @Classname SqlSession

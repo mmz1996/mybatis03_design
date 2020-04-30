@@ -1,4 +1,7 @@
-package com.mmz.sqlsession;
+package com.mmz.mybatis.sqlsession;
+
+import com.mmz.mybatis.cfg.Configuration;
+import com.mmz.mybatis.utils.XMLConfigBuilder;
 
 import java.io.InputStream;
 
@@ -11,6 +14,7 @@ import java.io.InputStream;
 public class SqlSessionFactoryBuilder {
     //根据参数的输入流，构建一个SqlSessionFactory
     public SqlSessionFactory build(InputStream inputStream){
-        return null;
+        Configuration configuration = XMLConfigBuilder.loadConfiguration(inputStream);
+        return new DefaultSqlSessionFactory(configuration);
     }
 }

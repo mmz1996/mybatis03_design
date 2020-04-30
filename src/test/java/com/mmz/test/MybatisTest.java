@@ -3,9 +3,9 @@ package com.mmz.test;
 import com.mmz.dao.UserDao;
 import com.mmz.mybatis.io.Resources;
 import com.mmz.pojo.User;
-import com.mmz.sqlsession.SqlSession;
-import com.mmz.sqlsession.SqlSessionFactory;
-import com.mmz.sqlsession.SqlSessionFactoryBuilder;
+import com.mmz.mybatis.sqlsession.SqlSession;
+import com.mmz.mybatis.sqlsession.SqlSessionFactory;
+import com.mmz.mybatis.sqlsession.SqlSessionFactoryBuilder;
 
 import java.io.InputStream;
 import java.util.List;
