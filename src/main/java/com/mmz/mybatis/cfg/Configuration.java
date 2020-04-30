@@ -1,8 +1,8 @@
 package com.mmz.mybatis.cfg;
 
-import com.mmz.mybatis.utils.Mapper;
 import lombok.Data;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -18,13 +18,13 @@ public class Configuration {
     private String url;
     private String password;
     private String username;
-    private Map<String, Mapper> mappers;
+    private Map<String, Mapper> mappers = new HashMap<String, Mapper>();
 
     public Map<String, Mapper> getMappers() {
         return mappers;
     }
 
-    public void setMappers(Map<String, Mapper> mappers) {
+    public void setMappers(Map<String,Mapper> mappers) {
         this.mappers.putAll(mappers);//此处需要追加的方式
     }
 }

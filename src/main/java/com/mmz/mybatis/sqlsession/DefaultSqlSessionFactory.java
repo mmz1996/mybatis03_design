@@ -2,6 +2,8 @@ package com.mmz.mybatis.sqlsession;
 
 import com.mmz.mybatis.cfg.Configuration;
 
+import java.sql.Connection;
+
 /**
  * @Classname DefaultSqlSessionFactory
  * @Description SqlSessionFactory实现类
@@ -9,11 +11,14 @@ import com.mmz.mybatis.cfg.Configuration;
  * @Created by mmz
  */
 public class DefaultSqlSessionFactory implements SqlSessionFactory {
+
+
     public SqlSession openSession() {
-        return new DefaultSqlSession(configuration);
+        return new DefaultSqlSession(configuration,connection);
     }
 
     private Configuration configuration;
+    private Connection connection;
 
     public DefaultSqlSessionFactory(Configuration configuration){
         this.configuration = configuration;

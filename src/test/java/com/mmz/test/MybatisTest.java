@@ -28,9 +28,14 @@ public class MybatisTest {
         //4.使用SqlSession创建dao代理对象
         UserDao userDao = sqlSession.getMapper(UserDao.class);
         //5.使用代理方法执行方法
-        List<User> list = userDao.findAll();
-        for(User user :list){
-            System.out.println(user);
+        try {
+            List<User> list = userDao.findAll();
+
+            for(User user :list){
+                System.out.println(user);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
         }
         //6.释放资源
         sqlSession.close();

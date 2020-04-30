@@ -1,4 +1,4 @@
-package com.mmz.mybatis.utils;
+package com.mmz.mybatis.cfg;
 
 import lombok.Data;
 
